@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #textarea {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+        <button onclick="makeBold()">Bold</button>
+        <button onclick="makeItalic()">Italic</button>
+        <button onclick="makeUnderline()">Underline</button>
+        <button onclick="alignLeft()">Left Align</button>
+        <button onclick="alignRight()">Right Align</button>
+        <button onclick="alignCenter()">Center Align</button>
+        <br><br>
+        Font Size: <input type="number" id="fontSize">
+        <button onclick="changeFontSize()">Change</button>
+        <br><br>
+        Font Color: <input type="color" id="fontColor">
+        <button onclick="changeFontColor()">Change</button>
+        
+        <textarea id="textarea"></textarea><br><br>
+
+    <script>
+        function makeBold() {
+            document.getElementById("textarea").style.fontWeight = "bold";
+        }
+
+        function makeItalic() {
+            document.getElementById("textarea").style.fontStyle = "italic";
+        }
+
+        function makeUnderline() {
+            document.getElementById("textarea").style.textDecoration = "underline";
+        }
+
+        function alignLeft() {
+            document.getElementById("textarea").style.textAlign = "left";
+        }
+
+        function alignRight() {
+            document.getElementById("textarea").style.textAlign = "right";
+        }
+
+        function alignCenter() {
+            document.getElementById("textarea").style.textAlign = "center";
+        }
+
+        function changeFontSize() {
+            var fontSize = document.getElementById("fontSize").value;
+            document.getElementById("textarea").style.fontSize = fontSize + "px";
+        }
+
+        function changeFontColor() {
+            var fontColor = document.getElementById("fontColor").value;
+            document.getElementById("textarea").style.color = fontColor;
+        }
+    </script>
+</body>
+
+</html>

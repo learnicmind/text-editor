@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Text Editor</title>
+</head>
+
+<body class="bg-slate-400">
+
+    <section class="max-w-7xl mx-auto bg-slate-500 mt-20 rounded px-20 py-10">
+        <h2 class="text-center text-4xl pb-4 text-white font-semibold">My Text Editor</h2>
+        <main class="bg-slate-600 border-2 border-slate-400 rounded">
+            <div class="flex justify-around items-center py-4">
+                <div class="md:flex pl-2 py-2 md:gap-2 text-white">
+                    <button onclick="makeBold()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-bold">BOLD</button>
+                    <button onclick="makeItalic()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg italic">Italic</button>
+                    <button onclick="makeUnderline()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg underline">Underline</button>
+                </div>
+                <div class="md:flex  px-2 py-2 md:gap-2">
+                    <button onclick="makeLeft()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg">Align Left</button>
+                    <button onclick="makeCenter()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg">Alighn center</button>
+                    <button onclick="makeRight()" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg">Align Right</button>
+                </div>
+                <div class="md:flex px-2 py-2 md:gap-2 ">
+                    <button class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg">Font Size</button>
+                    <input type="number" id="fontSize" class="w-10">
+                    <button class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg" onclick="changeFontSize()">Change</button>
+                    <button onclick="fontColor" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg">Color</button>
+                    <input type="color" id="fontColor">
+                    <button class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg" onclick="changeFontColor()">Change</button>
+                </div>
+                
+            </div>
+            <div class="border-t-2 w-3/4 mx-auto border-white pb-10 mt-6"></div>
+            <textarea name="" id="text-area" class="ml-[95px] rounded mb-4 w-1/2 md:w-10/12 h-48 md:h-96 "></textarea>
+        </main>
+    </section>
+
+<script src="js/text-editor.js"></script>
+</body>
+
+</html>
